@@ -16,19 +16,16 @@
     <p>burger: {{burger_name}}</p>
     <p>devoured: {{devoured}}</p>
     <p>---------------------</p>
-        {{> burgers/burger-block devoured=true}}
+    {{> burgers/burger-block devoured=true}}
     {{/unless}}
-    {{!-- <p>burger: {{burger_name}}</p>
-    <p>devoured: {{devoured}}</p>
-    <p>----------------------</p> --}}
     {{/each}}
+    
 <h2>Burgers that have been eaten:</h2>
     {{#each burgers}}
     {{#if devoured}}
     <p>burger: {{burger_name}}</p>
     <p>devoured: {{devoured}}</p>
     <p>----------------------</p>
-      {{!-- {{> burgers/burger-block devoured=false}} --}}
     {{/if}}
   {{/each}}
     

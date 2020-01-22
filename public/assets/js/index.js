@@ -20,7 +20,7 @@ $(function(){
         );
       });
     
-    $(".create").on("submit", function(event){
+    $(".create").on("submit", function(){
         // event.preventDefault();
 
         var newBurger = {
