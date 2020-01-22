@@ -1,22 +1,46 @@
-    <h1>Eat a burger!</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Burgers</title>
+    </head>
+    <body>
+    <img src="/assets/img/burger.png" alt="burger_img">
+    <div id="burger">
+    <h1>Eat a burger! </h1>
+    <h2>Burgers need to be eaten:</h2>
     {{#each burgers}}
     {{#unless devoured}}
-        {{> burgers/burger-block devoured=true}}
-    {{/unless}}
     <p>burger: {{burger_name}}</p>
     <p>devoured: {{devoured}}</p>
+    <p>---------------------</p>
+        {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+    {{!-- <p>burger: {{burger_name}}</p>
+    <p>devoured: {{devoured}}</p>
+    <p>----------------------</p> --}}
     {{/each}}
-
-    {{#each burgerss}}
+<h2>Burgers that have been eaten:</h2>
+    {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+    <p>burger: {{burger_name}}</p>
+    <p>devoured: {{devoured}}</p>
+    <p>----------------------</p>
+      {{!-- {{> burgers/burger-block devoured=false}} --}}
     {{/if}}
   {{/each}}
-
+    
+<div id="form">
     <form class="create">
-        <input id="name" name="name" placeholder="insert a new burger">
-        <input type="radio" name="devoured" id="devoured" value="1"> Devour! <br>
-        <input type="radio" name="devoured" value="0"> Savor
+        <input id="name" name="name" placeholder="insert a new burger"><br>
+        <input type="radio" name="devoured" id="devoured" value="1"> Devour!<br>
+        <input type="radio" name="devoured" value="0"> Savor<br>
 
         <button type="submit">submit</button>
     </form>
+</div>
+</div>
+</body>
+    </html>

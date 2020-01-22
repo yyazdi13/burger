@@ -21,7 +21,7 @@ $(function(){
       });
     
     $(".create").on("submit", function(event){
-        event.preventDefault();
+        // event.preventDefault();
 
         var newBurger = {
             name: $("#name").val().trim(),

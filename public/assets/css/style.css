@@ -1,6 +1,49 @@
+#burger{
+    background-color: lightsalmon;
+    
+    width: 1000px;
+}
+#name{
+    text-align: center;
+}
+
+#form{
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: center;
+   background-color: lightcoral;
+   position: absolute;
+   bottom: 300px;
+   right: 200px;
+   height: 150px;
+   width: 200px;
+}
+
+img{
+    width: 100px;
+}
+
+input{
+    margin: 10px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1, h2{
+    padding: 0;
+    margin: 5px;
+    text-align: center;
+}
 body{
     background-color: lavenderblush;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    align-content: center;
 }
