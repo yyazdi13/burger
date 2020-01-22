@@ -1,4 +1,4 @@
-const connection = require('./connection.js');
+const connection = require('../config/connection.js');
 
 function objToSql(ob) {
     var arr = [];
@@ -35,11 +35,11 @@ var orm = {
     },
     updateOne: function (table, objColVal, condition, cb) {
         var queryString = "UPDATE " + table + " SET " + objToSql(objColVal) + " WHERE " + condition;
-        connection.query(queryString, [tableInput, tablValue, ], function (err, res) {
+        connection.query(queryString, function (err, res) {
             if (err) throw err;
             cb(res);
         });
     }
 };
 
-module.exports(orm);
+module.exports = orm;

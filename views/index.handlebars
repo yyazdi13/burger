@@ -1,0 +1,22 @@
+    <h1>Eat a burger!</h1>
+    {{#each burgers}}
+    {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+    <p>burger: {{burger_name}}</p>
+    <p>devoured: {{devoured}}</p>
+    {{/each}}
+
+    {{#each burgerss}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+
+    <form class="create">
+        <input id="name" name="name" placeholder="insert a new burger">
+        <input type="radio" name="devoured" id="devoured" value="1"> Devour! <br>
+        <input type="radio" name="devoured" value="0"> Savor
+
+        <button type="submit">submit</button>
+    </form>
