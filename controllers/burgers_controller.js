@@ -1,6 +1,5 @@
 const express = require('express');
 const burger = require('../models/burger.js');
-var path = require('path');
 
 const router = express.Router();
 
@@ -10,7 +9,6 @@ router.get("/", function(req, res){
             burgers: data
         };
         res.render("index", hbs);
-        console.log((path.join(__dirname, "views/index.handlebars")));
     });
 });
 
