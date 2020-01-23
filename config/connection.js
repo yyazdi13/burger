@@ -5,7 +5,12 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "b8b364d7a8a8a5",
   password: "2035da46",
-  database: "heroku_be42f8ae3690ed0"
+  database: "heroku_be42f8ae3690ed0",
+  pool: {
+    max:5,
+    min: 0,
+    idle: 10000
+  }
 });
 
 connection.connect(function(err) {
@@ -15,5 +20,9 @@ connection.connect(function(err) {
   }
   console.log("connected as id " + connection.threadId);
 });
+
+setInterval(function () {
+  connection.query('SELECT 1');
+}, 5000);
 
 module.exports = connection;
