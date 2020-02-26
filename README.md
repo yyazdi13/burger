@@ -19,3 +19,5 @@
 
 ### Purpose
 This is a full stack application that follows an MVC model to connect to a database through the use of an ORM, API/HTML routes, static pages, and a server. The front-end javascript communicates with the server through GET, PUT, and POST requests defined in the API routes. 
+
+![image](https://user-images.githubusercontent.com/54565666/75305916-1518fe00-580d-11ea-8d0a-01ff2c981842.png)
