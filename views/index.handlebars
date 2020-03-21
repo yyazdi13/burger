@@ -10,6 +10,15 @@
     <img src="/assets/img/burger.png" alt="burger_img">
     <div id="burger">
     <h1>Eat a burger! </h1>
+    <div id="form">
+    <form class="create">
+        <input id="name" name="name" placeholder="insert a new burger"><br>
+        <input type="radio" name="devoured" id="devoured" value="1"> Devour!<br>
+        <input type="radio" name="devoured" value="0"> Savor<br>
+
+        <button type="submit">submit</button>
+    </form>
+</div>
     <h2>Burgers need to be eaten:</h2>
     {{#each burgers}}
     {{#unless devoured}}
@@ -29,15 +38,7 @@
     {{/if}}
   {{/each}}
     
-<div id="form">
-    <form class="create">
-        <input id="name" name="name" placeholder="insert a new burger"><br>
-        <input type="radio" name="devoured" id="devoured" value="1"> Devour!<br>
-        <input type="radio" name="devoured" value="0"> Savor<br>
 
-        <button type="submit">submit</button>
-    </form>
-</div>
 </div>
 </body>
     </html>
