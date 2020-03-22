@@ -6,7 +6,7 @@
 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the bottom side of the page.
 
-### FrameWork
+### Tools
 * Node.js
 * Heroku
 * Express.js
